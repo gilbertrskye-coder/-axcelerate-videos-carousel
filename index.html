@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https: data: blob:; media-src https: blob:; img-src https: data: blob:;">
 <title>Video Module</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -752,7 +754,6 @@
     }
   }
 </style>
-<base target="_blank">
 </head>
 <body>
 
@@ -768,7 +769,7 @@
     <div class="carousel-stage" id="carouselStage">
       <div class="video-card" id="videoCard">
         <div class="video-player" id="videoPlayer">
-          <video id="mainVideo" preload="metadata" playsinline></video>
+          <video id="mainVideo" preload="metadata" playsinline crossorigin="anonymous"></video>
 
           <button class="nav-arrow-overlay prev" id="prevBtn" aria-label="Previous video">
             <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
@@ -857,14 +858,19 @@
 
   const VIDEOS = [
     {
-      videoUrl:  "https://USERNAME.github.io/REPO-NAME/videos/video-01.mp4",
-      posterUrl: "https://USERNAME.github.io/REPO-NAME/videos/video-01.jpg",
-      duration:  "0:00"
+      videoUrl:  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      posterUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+      duration:  "9:56"
     },
     {
-      videoUrl:  "https://USERNAME.github.io/REPO-NAME/videos/video-02.mp4",
-      posterUrl: "https://USERNAME.github.io/REPO-NAME/videos/video-02.jpg",
-      duration:  "0:00"
+      videoUrl:  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      posterUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
+      duration:  "10:54"
+    },
+    {
+      videoUrl:  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      posterUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
+      duration:  "0:15"
     }
   ];
 
