@@ -1,1 +1,1 @@
-# -axcelerate-videos-carousel
+# axcelerate-videos-carousel
